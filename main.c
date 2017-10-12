@@ -37,7 +37,7 @@ void *readFromBuff()
     DataType val;
 //    pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL); commented cause issue was solved
 
-    sleep(2);
+    sleep(2);            //this is here to test how the buffer works when it is full
     while(!finish) {
         val = rb_deque(buff);
         pthread_mutex_lock(&readmutex);
